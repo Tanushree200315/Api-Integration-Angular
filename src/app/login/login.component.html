@@ -1,0 +1,26 @@
+<form (ngSubmit)="submitForm()">
+    <!-- Your form fields -->
+    <input type="text" [(ngModel)]="formData.title" name="title" placeholder="First Name" />
+    <input type="text" [(ngModel)]="formData.body" name="body" placeholder="Last Name" />
+    <input type="text" [(ngModel)]="formData.userId" name="lastName" placeholder="Last Name" />
+   
+    <!-- Submit button -->
+    <button type="submit">Submit</button>
+  </form>
+  <div *ngIf="responseData">
+    <h2>API Response Data:</h2>
+    <p>Title: {{ responseData.title }}</p>
+    <p>Body: {{ responseData.body }}</p>
+    <p>UserId: {{ responseData.userId }}</p>
+  </div>
+
+<!-- <h1>get method 
+
+</h1>
+<p>
+    {{getJsonValue | json}}
+</p>
+<h1>post method</h1>
+<p>
+    {{postJsonValue | json}}
+</p> -->
